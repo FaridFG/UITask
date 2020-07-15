@@ -482,6 +482,10 @@ aside {
     border-radius: 5px;
 }
 
+.main-content .applicants-table table thead {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
 .main-content .applicants-table table thead th {
     padding: 20px 0;
     color: #212121;
@@ -499,7 +503,7 @@ aside {
     text-align: center;
 }
 
-.main-content .applicants-table table tr {
+.main-content .applicants-table table tbody tr:nth-child(2) {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -557,6 +561,10 @@ aside {
 .main-content .applicants-table table tbody tr.offers button:last-child::before {
     content: url(../images/notification.png);
     padding-right: 10px;
+}
+
+.main-content .applicants-table table tfoot {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
 
 .main-content .applicants-table table tfoot td {
