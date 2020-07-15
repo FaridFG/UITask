@@ -1,0 +1,882 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* custom scroll styles */
+::-webkit-scrollbar-track {
+    -webkit--box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit--box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #776f6f;
+}
+/* custom scroll styles */
+
+/* common styles for whole document */
+body {
+    font-family: Segoe UI;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+button {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header styles start */
+header {
+    background: url(../images/header_bg.png);
+    background-size: 100% 100%;
+    height: 270px;
+    display: flex;
+    padding-top: 25px;
+    color: #fff;
+}
+
+.logo {
+    width: 17%;
+}
+
+.logo p {
+    width: 80%;
+    word-wrap: break-word;
+    padding-left: 20px;
+}
+
+.navbar {
+    width: 83%;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.search-box {
+    width: 30%;
+}
+
+.search-box form {
+    position: relative;
+    height: 100%;
+}
+
+.search-box input {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.search-box input[placeholder] {
+    padding-left: 2.75em;
+}
+
+#main-search img {
+    position: absolute;
+    left: .75em;
+    top: 12px;
+}
+
+.navbar nav .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .options .menu-options {
+    display: flex;
+    align-items: center;
+}
+
+.language-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 120px;
+}
+
+.menu-options .menu-icon {
+    margin: 0 50px 0 15px;
+}
+
+.account-options {
+    display: flex;
+    align-items: center;
+}
+
+.account-options p {
+    padding-left: 15px;
+}
+
+.account-options p:first-child {
+    font-size: 10px;
+    line-height: 13px;
+}
+
+nav .responsive-menu {
+    display: none;
+}
+
+nav .responsive-menu > ul > li {
+    position: relative;
+}
+
+nav .responsive-menu > ul > li > a {
+    color: #fff;
+    font-size: 25px;
+}
+
+.responsive-dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 200px;
+    color: #000;
+    right: 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.responsive-dropdown-menu .account-options {
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.responsive-dropdown-menu .language-options {
+    justify-content: center;
+    width: 100%;
+}
+
+.responsive-dropdown-menu .language-options p {
+    padding: 0 20px;
+}
+
+.responsive-dropdown-menu .search-box {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.responsive-dropdown-menu .search-box form input {
+    height: 30px;
+    border: thin solid rgb(133, 129, 129);
+    border-radius: 20px;
+}
+
+.search-box input[placeholder] {
+    padding-left: 3.2em;
+}
+
+.search-box img {
+    position: absolute;
+    left: 1.1em;
+    top: 5px;
+}
+
+ul.responsive-dropdown-menu li:last-child {
+    margin: 10px 0;
+}
+/* header styles end */
+
+main {
+    display: flex;
+}
+
+/* left sidebar styles start */
+aside {
+    width: 17%;
+}
+
+.left-menu >  ul li {
+    padding: 5px 0;
+}
+
+.left-menu >  ul > li li {
+    padding-left: 27px;
+    position: relative;
+}
+
+.left-menu >  ul > li:last-child {
+    position: relative;
+}
+
+.left-menu >  ul > li:last-child > ul {
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+.left-menu >  ul > li a {
+    color: #212121;
+    font-size: 13px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.left-menu > ul > li:first-child::before {
+    content: url(../images/homepage_icon.png);
+    padding: 0 5px 0 10px;
+}
+
+.left-menu > ul > li:last-child::before {
+    content: url(../images/application_icon.png);
+    padding: 0 5px 0 10px;
+}
+
+.left-menu > ul > li:last-child > img {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    cursor: pointer;
+}
+
+.left-menu .active {
+    background: #99BCFF;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.left-menu .active::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 6%;
+    width: 6px;
+    height: 6px;
+    background: #0045CC;
+    border-radius: 50%;
+}
+
+.responsive-sidebar {
+    display: none;
+    position: relative;
+    z-index: 99999;
+    width: 250px;
+}
+
+.responsive-sidebar > ul {
+    width: 100%;
+}
+
+.responsive-sidebar > ul > li {
+    padding-left: 10px;
+    width: 100%;
+}
+
+.responsive-sidebar > ul > li:first-child {
+    text-align: right;
+    padding: 10px 10px 0 0;
+}
+
+.responsive-sidebar > ul > li:last-child img {
+    padding-left: 15px;
+}
+
+.responsive-sidebar > ul > li > ul {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+.responsive-sidebar > ul > li > ul li {
+    padding: 5px 0 5px 15px;
+}
+
+.responsive-sidebar a {
+    color: #212121;
+}
+
+.responsive-sidebar .dropdown {
+    cursor: pointer;
+}
+
+.left-menu .responsive-sidebar .active::after {
+    content: "";
+    position: absolute;
+    top: calc(30% - 3px);
+    right: 6%;
+    width: 6px;
+    height: 6px;
+    background: #0045CC;
+    border-radius: 50%;
+}
+/* left sidebar styles end */
+
+/* main content styles start */
+.main-content {
+    width: 83%;
+    transform: translateY(-100px);
+}
+
+.main-content .container {
+    height: 100%;
+}
+
+.main-content h1 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 29px;
+    color: #FFF;
+    margin-bottom: 25px;
+}
+
+.main-content .filter {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.main-content .filter h5 {
+    margin-bottom: 25px;
+}
+
+.main-content .filter form {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content .filter form div {
+    width: 18%;
+}
+
+.main-content .filter form label {
+    font-size: 12px;
+    line-height: 19px;
+    color: #757575;
+}
+
+.main-content .filter form input, select {
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    width: 100%;
+    height: 25px;
+    padding-left: 5px;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.main-content .settings {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content .settings .detailed button {
+    background: #F6F6F6;
+    border-radius: 4px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-content .settings .detailed button::before {
+    content: url(../images/more_icon.png);
+}
+
+.main-content .settings .search button {
+    background: #0045CC;
+    border-radius: 4px;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-content .settings .search button::before {
+    content: url(../images/search_white.png);
+}
+
+.main-content .results {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content .results .file-options {
+    display: flex;
+}
+
+.main-content .results .file-options button {
+    background: #F6F6F6;
+    border-radius: 4px;
+    border: none;
+    margin: 0 10px;
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-content .results .file-options button:first-child::before {
+    content: url(../images/pdf_icon.png);
+}
+
+.main-content .results .file-options button:nth-child(2)::before {
+    content: url(../images/excel_icon.png);
+}
+
+.main-content .results .file-options button:last-child::before {
+    content: url(../images/print_icon.png);
+}
+
+.main-content .applicants-table {
+    overflow-x: scroll;
+    border: 2px solid #EFEFEF;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+
+.main-content .applicants-table table {
+    width: 1188px;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.main-content .applicants-table table thead th {
+    padding: 20px 0;
+    color: #212121;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 23px;
+    text-align: left;
+}
+
+.main-content .applicants-table table thead th:first-child {
+    padding-left: 10px;
+}
+
+.main-content .applicants-table table thead th.center {
+    text-align: center;
+}
+
+.main-content .applicants-table table tr {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.main-content .applicants-table table tbody td {
+    padding: 15px 0;
+    font-size: 13px;
+}
+
+.main-content .applicants-table table tbody tr > td:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.main-content .applicants-table table tbody td img {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+}
+
+.main-content .applicants-table table tbody tr.offers td:last-child {
+    transform: translateX(-75px);
+}
+
+.main-content .applicants-table table tbody tr.offers div {
+    display: flex;
+}
+
+.main-content .applicants-table table tbody tr.offers button {
+    background: #F6F6F6;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    display: flex;
+    font-size: 13px;
+}
+
+.main-content .applicants-table table tbody tr.offers button:first-child::before {
+    content: url(../images/personal_info.png);
+    padding-right: 10px;
+}
+
+.main-content .applicants-table table tbody tr.offers button:nth-child(2)::before {
+    content: url(../images/private_doc.png);
+    padding-right: 10px;
+}
+
+.main-content .applicants-table table tbody tr.offers button:nth-child(3)::before {
+    content: url(../images/proper_work.png);
+    padding-right: 10px;
+}
+
+.main-content .applicants-table table tbody tr.offers button:last-child::before {
+    content: url(../images/notification.png);
+    padding-right: 10px;
+}
+
+.main-content .applicants-table table tfoot td {
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.main-content .applicants-table table tfoot td nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .applicants-table table tfoot td nav ul.pagination {
+    margin: auto 0;
+    display: flex;
+    border: 1px solid #DEE2E6;
+    border-radius: 5px;
+}
+
+.main-content .applicants-table table tfoot td nav ul li {
+    padding: 10px 15px;
+    border-right: 1px solid #DEE2E6;
+}
+
+.main-content .applicants-table table tfoot td nav .active {
+    background-color: #0045CC;
+    color: #fff;
+}
+
+.main-content .applicants-table table tfoot td nav ul li:last-child {
+    border-right: none;
+}
+
+.main-content .applicants-table .btn-close {
+    cursor: pointer;
+}
+/* main content styles end */
+
+/* modal styles start */
+div.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    display: none;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+div.modal .content {
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+div.modal .content > div {
+    margin: 30px 0;
+}
+
+div.modal .content .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.modal .content .heading hr {
+    height: 0px;
+    width: 35%;
+    border: 1px solid #0045CC;
+}
+
+div.modal .content .choice form {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+}
+
+div.modal .content .choice form > div:first-child {
+    margin-right: 25px;
+}
+
+div.modal .content .buttons {
+    display: flex;
+    justify-content: center;
+}
+
+div.modal .content .buttons > div {
+    margin: 0 10px;
+}
+
+div.modal .content .buttons button {
+    border: none;
+    padding: 10px 20px;
+}
+
+div.modal .content .buttons .close {
+    background-color: #F6F6F6;
+    color: #0045CC;
+    border-radius: 4px;
+}
+
+div.modal .content .buttons .save {
+    background-color: #0045CC;
+    color: #fff;
+    border-radius: 4px;
+}
+/* modal styles end */
+
+/* responsive styles start */
+@media (max-width: 1228px) {
+    .left-menu > ul {
+        display: none;
+    }
+
+    .responsive-sidebar {
+        background-color: #fff;
+        box-shadow: 2px 2px 10px 1px rgb(160, 155, 155);
+        border-radius: 5px;
+        display: block;
+        padding-bottom: 10px;
+        transform: translateX(-220px);
+        transition: transform .5s;
+    }
+
+    .responsive-sidebar > ul > li:first-child {
+        display: block;
+    }
+}
+
+@media (max-width: 1144px) {
+    .main-content .filter {
+        padding: 15px 10px;
+    }
+
+    .main-content .filter h5 {
+        width: 70%;
+        margin: 0 auto 25px auto;
+    }
+    
+    .main-content .filter form {
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .main-content .filter form div {
+        width: 70%;
+    }
+    
+    .main-content .filter form label {
+        font-size: 13px;
+    }
+    
+    .main-content .filter form input, select {
+        padding-left: 15px;
+        font-size: 13px;
+    }
+
+    .main-content .filter .settings {
+        width: 70%;
+        margin: 25px auto;
+    }
+
+    div.modal .content {
+        width: 80%;
+        padding: 10px 20px;
+    }
+    
+    div.modal .content > div {
+        margin: 20px 0;
+    }
+    
+    div.modal .content .heading hr {
+        width: 34%;
+    }
+    
+    div.modal .content .choice label {
+        font-size: 14px;
+    }
+    
+    div.modal .content .choice form > div:first-child {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo p {
+        width: 200px;
+    }
+
+    .navbar nav {
+        justify-content: flex-end;
+    }
+
+    #main-search {
+        display: none;
+    }
+    
+    .navbar nav .options {
+        display: none;
+    }
+    
+    nav .responsive-menu {
+        display: block;
+    }
+
+    div.modal .content {
+        padding: 5px 10px;
+    }
+    
+    div.modal .content > div {
+        margin: 10px 0;
+    }
+    
+    div.modal .content .heading hr {
+        width: 30%;
+    }
+    
+    div.modal .content .choice label {
+        font-size: 12px;
+    }
+    
+    div.modal .content .choice form > div:first-child {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 586px) {
+    .main-content .filter h5 {
+        width: 90%;
+        margin: 0 auto 15px auto;
+    }
+    
+    .main-content .filter form div {
+        width: 90%;
+    }
+    
+    .main-content .filter form label {
+        font-size: 12px;
+    }
+    
+    .main-content .filter form input, select {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+
+    .main-content .filter .settings {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .main-content .settings .detailed button, .main-content .settings .search button {
+        width: 80px;
+        height: 35px;
+    }
+
+    .main-content .results {
+        display: block;
+    }
+
+    .main-content .results p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .main-content .results .file-options {
+        justify-content: center;
+    }
+    
+    .main-content .results .file-options button {
+        margin: 10px;
+        width: 60px;
+        height: 25px;
+        font-size: 12px;
+        line-height: 10px;
+    }
+
+    div.modal .content {
+        padding: 5px 10px;
+    }
+    
+    div.modal .content > div {
+        margin: 10px 0;
+    }
+    
+    div.modal .content .heading hr {
+        width: 25%;
+    }
+
+    div.modal .content .heading h4 {
+        font-size: 12px;
+    }
+    
+    div.modal .content .choice label {
+        font-size: 11px;
+    }
+    
+    div.modal .content .choice form > div:first-child {
+        margin-right: 5px;
+    }
+}
+/* responsive styles end */
+
+.show-sidebar {
+    transform: translateX(0);
+    transition: transform .5s;
+}
+
+.hide-menu {
+    display: none;
+}

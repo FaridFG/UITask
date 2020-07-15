@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>UI Developer Task</title>
+</head>
+<body>
+    <!-- header starts -->
+    <header>
+        <div class="logo">
+            <p>Əmək Münasibətləri və Məşqulluq Alt Sistemi</p>
+        </div>
+        <div class="navbar">
+            <nav class="container">
+                <div class="search-box" id="main-search">
+                    <form action="#">
+                        <input type="search" name="search" id="search" placeholder="Axtar" />
+                        <img src="images/search_icon.png" alt="search icon" />
+                    </form>
+                </div>
+                <div class="options">
+                    <div class="menu-options">
+                        <div class="language-options">
+                            <img src="images/lang_icon.png" alt="country flag of the selected language" />
+                            <p>English</p>
+                            <img src="images/next_icon.png" alt="select icon" />
+                        </div>
+                        <div class="menu-icon">
+                            <img src="images/menu_icon.png" alt="menu icon" />
+                        </div>
+                    </div>
+                    <div class="account-options">
+                        <div class="profile-image">
+                            <img src="images/profile_image.png" alt="user's profile image" />
+                        </div>
+                        <div class="username">
+                            <p>Xoş gördük</p>
+                            <p>Fərid Vəliyev</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- menu icon for tablets and phones -->
+                <div class="responsive-menu">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-bars"></i></a>
+                            <ul class="responsive-dropdown-menu">
+                                <li>
+                                    <div class="account-options">
+                                        <div class="profile-image">
+                                            <img src="images/profile_image.png" alt="user's profile image" />
+                                        </div>
+                                        <div class="username">
+                                            <p>Xoş gördük</p>
+                                            <p>Fərid Vəliyev</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="language-options">
+                                        <img src="images/lang_icon.png" alt="country flag of the selected language" />
+                                        <p>English</p>
+                                        <img src="images/next_icon.png" alt="select icon" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="search-box">
+                                        <form action="#">
+                                            <input type="search" name="search" id="search" placeholder="Axtar" />
+                                            <img src="images/search_icon.png" alt="search icon" />
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header ends -->
+
+    <!-- main section starts -->
+    <main>
+        <!-- left sidebar menu starts -->
+        <aside>
+            <div class="left-menu">
+                <ul>
+                    <li><a href="#">Ana Səhifə</a></li>
+                    <li><a href="#">Müraciət edən şəxslərlə iş</a>
+                        <img src="images/dropdown_icon.png" alt="" class="dropdown">
+                        <ul>
+                            <li><a href="#">Yeni müraciətlər</a></li>
+                            <li class="active"><a href="#">İşaxtaran şəxslər</a></li>
+                            <li><a href="#">İşsiz şəxslər</a></li>
+                            <li><a href="#">İşlə təmin edilmiş şəxslər</a></li>
+                            <li><a href="#">Qeydiyyatı dayandırılmış şəxslər</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="responsive-sidebar">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                        <li class="hide-menu"><a href="#">Ana Səhifə</a></li>
+                        <li class="hide-menu"><a href="#">Müraciət edən şəxslərlə iş</a><img src="images/dropdown_icon.png" alt="" class="dropdown">
+                            <ul>
+                                <li><a href="#">Yeni müraciətlər</a></li>
+                                <li class="active"><a href="#">İşaxtaran şəxslər</a></li>
+                                <li><a href="#">İşsiz şəxslər</a></li>
+                                <li><a href="#">İşlə təmin edilmiş şəxslər</a></li>
+                                <li><a href="#">Qeydiyyatı dayandırılmış şəxslər</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- main content goes below -->
+        <section class="main-content">
+            <div class="container">
+                <h1>İşaxtaran şəxslər</h1>
+                <div class="filter">
+                    <h5>Axtarış filtrləri</h5>
+                    <form action="#">
+                        <div>
+                            <label for="id">FİN</label><br />
+                            <input type="text" name="identity" id="id" />
+                        </div>
+                        <div>
+                            <label for="fullname">Ad, soyad, ata adı</label><br />
+                            <input type="text" name="fullname" id="fullname" />
+                        </div>
+                        <div>
+                            <label for="work">İşlə təmin olunma forması</label><br />
+                            <select name="work" id="work">
+                                <option value="forma1">İşlə təmin olunma forması 1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="since">Tarixdən</label><br />
+                            <input type="date" name="since" id="since" />
+                        </div>
+                        <div>
+                            <label for="until">Tarixə</label><br />
+                            <input type="date" name="until" id="until" />
+                        </div>
+                    </form>
+                    <div class="settings">
+                        <div class="detailed">
+                            <button>Ətraflı</button>
+                        </div>
+                        <div class="search">
+                            <button>Axtarış et</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="results">
+                    <div class="overall">
+                        <p>Ümumi nəticələr [356]</p>
+                    </div>
+                    <div class="file-options">
+                        <button>PDF</button>
+                        <button>Excel</button>
+                        <button>Çap et</button>
+                    </div>
+                </div>
+                <div class="applicants-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>S/S</th>
+                                <th>FİN</th>
+                                <th>Ad, soyad, ata adı</th>
+                                <th>Müraciətin tarixi</th>
+                                <th>Müraciətin növü</th>
+                                <th>İşaxtaran kimi qeydiyyat tarixi</th>
+                                <th>Qeydiyyata alan orqan</th>
+                                <th class="center">Ləğv et</th>
+                                <th class="center">Ətraflı</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1
+                                    <img src="images/user1.png" alt="applicant's profile photo" />
+                                </td>
+                                <td>25UGAP3</td>
+                                <td>Quliyeva İnci Vidadi</td>
+                                <td>01.01.2020</td>
+                                <td>İş üçün</td>
+                                <td>01.01.2020</td>
+                                <td>1 saylı MM</td>
+                                <td><img src="images/close_icon.png" alt="close icon" class="btn-close"></td>
+                                <td><img src="images/in_detail.png" alt="in detail icon"></td>
+                            </tr>
+                            <tr class="offers">
+                                <td></td>
+                                <td colspan="8">
+                                    <div>
+                                        <button>Vətəndaşın şəxsi işi</button>
+                                        <button>Fərdi Məşğulluq Vərəqi</button>
+                                        <button>Münasib iş</button>
+                                        <button>Göndərişlər</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3
+                                    <img src="images/user3.png" alt="applicant's profile photo" />
+                                </td>
+                                <td>25UGAP3</td>
+                                <td>Quliyev Vaqif Əlibala</td>
+                                <td>01.01.2020</td>
+                                <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                <td>01.01.2020</td>
+                                <td>1 saylı MM</td>
+                                <td><img src="images/close_icon.png" alt="close icon" class="btn-close"></td>
+                                <td><img src="images/in_detail.png" alt="in detail icon"></td>
+                            </tr>
+                            <tr>
+                                <td>4
+                                    <img src="images/user4.png" alt="applicant's profile photo" />
+                                </td>
+                                <td>25UGAP3</td>
+                                <td>Qasımov Rüfət Qırxlar</td>
+                                <td>01.01.2020</td>
+                                <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                <td>01.01.2020</td>
+                                <td>1 saylı MM</td>
+                                <td><img src="images/close_icon.png" alt="close icon" class="btn-close"></td>
+                                <td><img src="images/in_detail.png" alt="in detail icon"></td>
+                            </tr>
+                            <tr>
+                                <td>5
+                                    <img src="images/user5.png" alt="applicant's profile photo" />
+                                </td>
+                                <td>25UGAP3</td>
+                                <td>Miriyev Zakir Qurban</td>
+                                <td>01.01.2020</td>
+                                <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                <td>01.01.2020</td>
+                                <td>1 saylı MM</td>
+                                <td><img src="images/close_icon.png" alt="close icon" class="btn-close"></td>
+                                <td><img src="images/in_detail.png" alt="in detail icon"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="9">
+                                    <nav>
+                                        <ul class="pagination">
+                                            <li>
+                                                  <a href="#">
+                                                      <img src="images/left_arrow.png" alt="">
+                                                  </a>
+                                            </li>
+                                            <li class="active"><a class="active" href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li>
+                                                <a class="page-link" href="#">
+                                                    <img src="images/right_arrow.png" alt="">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main section ends -->
+
+    <!-- modal window starts -->
+    <div class="modal">
+        <div class="content">
+            <div class="heading">
+                <hr />
+                <h4>Yeni müraciəti ləğv et</h4>
+                <hr />
+            </div>
+            <div class="choice">
+                <form action="#">
+                    <div>
+                        <input type="checkbox" name="decline" id="choice1">
+                    </div>
+                    <div>
+                        <label for="choice1">Təqdim olunmuş sənədlərdə və məlumatlarda təhrif olunmuş və ya düzgün olmayan məlumatlar aşkar edildikdə.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="choice">
+                <form action="#">
+                    <div>
+                        <input type="checkbox" name="decline" id="choice2">
+                    </div>
+                    <div>
+                        <label for="choice2">Hərbi və ya alternativ xidmətdə olduqda, hərbi toplanışlarda olduqda.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="choice">
+                <form action="#">
+                    <div>
+                        <input type="checkbox" name="decline" id="choice3">
+                    </div>
+                    <div>
+                        <label for="choice3">Barəsində azadlıqdan məhrumetmə və ya tibbi xarakterli məcburi tədbirlərin tətbiqinə dair məhkəmənin qanuni qüvvəyə minmiş qərarı olduqda.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="choice">
+                <form action="#">
+                    <div>
+                        <input type="checkbox" name="decline" id="choice4">
+                    </div>
+                    <div>
+                        <label for="choice4">Vəfat etdikdə və ya məhkəmənin qanuni qüvvəyə minmiş qərarı əsasında xəbərsiz itkin düşmüş və ya ölmüş elan edildikdə.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="buttons">
+                <div>
+                    <button class="close-modal">Bağla</button>
+                </div>
+                <div>
+                    <button class="save">Yadda saxla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal window ends -->
+
+    <!-- necessary JS links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/3f7e3de7b3.js" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
