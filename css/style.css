@@ -699,6 +699,11 @@ div.modal .content .buttons .save {
 }
 
 @media (max-width: 1144px) {
+    .main-content {
+        width: 90%;
+        transform: translate(-13%, -100px);
+    }
+
     .main-content .filter {
         padding: 15px 10px;
     }
